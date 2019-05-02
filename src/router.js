@@ -15,6 +15,7 @@ const setVersion = version => async (ctx, next) => {
 const apiV1 = new Router();
 apiV1.post('/census/groupBy', controllers.api.v1.census.groupBy);
 apiV1.get('/census/demographicColumns', controllers.api.v1.census.demographicColumns);
+apiV1.get('/google/generateAuthUrl', controllers.api.v1.google.generateAuthUrl);
 
 router.use(
   '/api/v1',
